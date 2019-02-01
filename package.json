@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha --timeout 10000 src/tests/*.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
-    "prod": "cross-env NODE_ENV=prod node api.js",
-    "start": "node index.js"
+    "prod": "cross-env NODE_ENV=prod node api.js"
     
   },
   "keywords": [],
