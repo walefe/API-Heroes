@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "src/api.js",
   "scripts": {
-    "start": "node src/api.js",
     "test": "mocha --timeout 10000 src/tests/*.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
     "prod": "cross-env NODE_ENV=prod node src/api.js"
