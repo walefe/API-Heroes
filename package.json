@@ -1,13 +1,11 @@
 {
   "name": "07-multi-db",
   "version": "1.0.0",
-  "description": "docker run \\     --name postgres \\     -e POSTGRES_USER=walefe \\     -e POSTGRES_PASSWORD=123456 \\     -e POSTGRES_DB=heroes \\     -p 5432:5432 \\     -d \\     postgres",
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 10000 src/tests/*.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
-    "prod": "cross-env NODE_ENV=prod node api.js",
-    "start": "node api.js"
+    "prod": "cross-env NODE_ENV=prod node api.js"
     
   },
   "keywords": [],
