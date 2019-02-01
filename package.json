@@ -1,7 +1,7 @@
 {
   "name": "07-multi-db",
   "version": "1.0.0",
-  "main": "api.js",
+  "main": "src/api.js",
   "scripts": {
     "start": "node src/api.js",
     "test": "mocha --timeout 10000 src/tests/*.js",
