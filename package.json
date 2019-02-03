@@ -6,8 +6,7 @@
     "start": "npm run prod",
     "test": "mocha --timeout 10000 src/tests/*.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
-    "prod": "cross-env NODE_ENV=prod node src/api.js"
-    
+    "prod": "cross-env NODE_ENV=prod pm2-runtime src/api.js"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +27,7 @@
     "pd": "^0.8.1",
     "pg": "^7.7.1",
     "pg-hstore": "^2.3.2",
+    "pm2": "^3.2.9",
     "sequelize": "^4.42.0",
     "vision": "^5.4.4"
   }
