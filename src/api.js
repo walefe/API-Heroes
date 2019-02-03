@@ -30,6 +30,8 @@ const Vision = require('vision')
 const Inert = require('inert')
 
 const HapiJwt = require('hapi-auth-jwt2')
+const UtilRotes = require('./routes/utilRoutes')
+
 const JWT_SECRET = process.env.JWT_KEY
 
 const app = new Hapi.Server({
@@ -90,7 +92,8 @@ async function main() {
     app.auth.default('jwt')
     app.route([
         ...mapRoutes(new HeroRoute(context), HeroRoute.methods()),
-        ...mapRoutes(new AuthRoutes(JWT_SECRET, contextPostgres), AuthRoutes.methods())
+        ...mapRoutes(new AuthRoutes(JWT_SECRET, contextPostgres), AuthRoutes.methods()),
+        ...mapRoutes(new UtilRotes(), UtilRotes.methods())
     ]
 
     )

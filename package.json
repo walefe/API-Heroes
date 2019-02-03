@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run prod",
-    "test": "mocha --timeout 10000 src/tests/*.js",
+    "test": "nyc --reporter=html mocha --timeout 10000 --exit src/tests/*.js",
     "test:prod": "cross-env NODE_ENV=prod npm t",
     "prod": "cross-env NODE_ENV=prod pm2-runtime src/api.js"
   },
@@ -30,5 +30,8 @@
     "pm2": "^3.2.9",
     "sequelize": "^4.42.0",
     "vision": "^5.4.4"
+  },
+  "devDependencies": {
+    "nyc": "^13.1.0"
   }
 }
