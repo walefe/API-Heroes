@@ -2,13 +2,13 @@
 // docker exec -it 48b0eda431a8 mongo -u walefe -p 123456 --authenticationDatabase herois
 
 //databases 
-show dbs
+//show dbs
 
 //mudando o contexto para um database 
-use herois
+//use herois
 
 //mostrar tables (colecoes)
-show collections 
+//show collections 
 
 db.herois.insert({
     nome: 'Flash',
