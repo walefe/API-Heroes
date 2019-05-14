@@ -3,6 +3,7 @@
 // npm i hapi-auth-jwt2
 
 // npm i bcrypt
+const cors = require('cors');
 const { config } = require('dotenv')
 const { join } = require('path')
 const { ok } = require('assert')
@@ -37,6 +38,9 @@ const JWT_SECRET = process.env.JWT_KEY
 const app = new Hapi.Server({
     port: process.env.PORT
 })
+
+app.use(cors());
+
 function mapRoutes(isntance, methods) {
     return methods.map(method => isntance[method]())
 }
