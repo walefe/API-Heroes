@@ -31,15 +31,14 @@ const Inert = require('inert')
 
 const HapiJwt = require('hapi-auth-jwt2')
 const UtilRotes = require('./routes/utilRoutes')
-const cors = require('cors');
 
 const JWT_SECRET = process.env.JWT_KEY
 
 const app = new Hapi.Server({
-    port: process.env.PORT
+    port: process.env.PORT,
+    cors: true,
 })
 
-app.use(cors());
 
 function mapRoutes(isntance, methods) {
     return methods.map(method => isntance[method]())
