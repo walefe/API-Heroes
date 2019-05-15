@@ -36,7 +36,9 @@ const JWT_SECRET = process.env.JWT_KEY
 
 const app = new Hapi.Server({
     port: process.env.PORT,
-    cors: true,
+    routes: {
+        cors: true
+    }
 })
 
 
