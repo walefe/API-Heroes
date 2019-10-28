@@ -30,7 +30,7 @@
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.2",
     "pm2": "^3.5.1",
-    "sequelize": "^4.44.0",
+    "sequelize": "^5.15.1",
     "vision": "^5.4.4"
   },
   "devDependencies": {
